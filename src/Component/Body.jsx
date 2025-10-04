@@ -228,10 +228,10 @@ const Home = () => {
                           <th className="py-4 px-6 text-left font-semibold">
                             Symbol
                           </th>
-                          <th className="py-4 px-6 text-center font-semibold">
+                          <th className="py-4 px-6 text-center font-semibold lg:flex hidden lg:text-center">
                             Logo
                           </th>
-                          <th className="lg:flex hidden py-4 px-6 text-center font-semibold">
+                          <th className=" py-4 px-6  lg:items-center  font-semibold">
                             Price
                           </th>
                         </tr>
@@ -252,8 +252,8 @@ const Home = () => {
                               </span>
                             </td>
 
-                            <td className="py-4 px-6 ">
-                              <span className="inline-flex  items-center justify-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            <td className="py-4 px-6 lg:flex  hidden ">
+                              <span className="lg:inline-flex  hidden items-center justify-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
                                 {v.symbol.toUpperCase()}
                               </span>
                             </td>
@@ -267,7 +267,7 @@ const Home = () => {
                                 />
                               </div>
                             </td>
-                            <td className=" lg:flex hidden  py-4 px-6 font-medium text-gray-800">
+                            <td className=" flex lg:items-center  py-4 px-6 font-medium text-gray-800">
                               {v.current_price}
                             </td>
                           </tr>
