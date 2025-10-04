@@ -74,13 +74,16 @@ const Header = () => {
             </li>
           </ul>
 
-          <ul
-            className={`lg:hidden absolute top-16 left-0 w-full bg-white p-4 transition-all duration-300 ease-in-out ${
-              isOpen
-                ? "grid grid-rows-5 gap-4 opacity-100 visible max-h-[80vh]"
-                : "opacity-0 invisible max-h-0"
-            }`}
-          >
+         <ul
+  className={`lg:hidden absolute top-16 left-0 w-full bg-white p-4 overflow-hidden 
+    transition-all duration-500 ease-out
+    ${
+      isOpen
+        ? "grid grid-rows-5 gap-4 opacity-100 visible max-h-[80vh] translate-y-0 shadow-lg"
+        : "opacity-0 invisible max-h-0 -translate-y-4"
+    }`}
+>
+          
             <li>
               <a href="#" className="hover:text-gray-400 text-[black] block">
                 Wallet
