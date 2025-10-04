@@ -220,7 +220,7 @@ const Home = () => {
                     </div>
                   ) : (
                     <table className="min-w-full bg-white rounded-xl overflow-hidden">
-                      <thead className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+                      <thead className="bg-gradient-to-r from-blue-500 to-indigo-600 text-black">
                         <tr>
                           <th className="py-4 px-6 text-left font-semibold">
                             Name
