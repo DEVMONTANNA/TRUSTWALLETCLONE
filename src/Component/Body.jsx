@@ -13,8 +13,8 @@ const Home = () => {
     async function fetchPair() {
       const getCoins = localStorage.getItem("coins");
       const parsedCoins = JSON.parse(getCoins);
-      setCoin(parsedCoins.slice(0, 30));
-      setRecords(parsedCoins.slice(0, 30));
+      setCoin(parsedCoins?.slice(0, 30));
+      setRecords(parsedCoins?.slice(0, 30));
 
       try {
         const res = await fetch(
@@ -25,7 +25,7 @@ const Home = () => {
         }
         const convert_to_json = await res.json();
         localStorage.setItem("coins", JSON.stringify(convert_to_json));
-        setCoin(convert_to_json.slice(0, 30));
+        setCoin(convert_to_json?.slice(0, 30));
         console.log(convert_to_json);
       } catch (error) {
         console.error("Error", error);
@@ -36,7 +36,7 @@ const Home = () => {
 
   function filter(event) {
     const searchValue = event.target.value.toLowerCase();
-    setRecords(coin.filter((f) => f.name.toLowerCase().includes(searchValue)));
+    setRecords(coin?.filter((f) => f.name.toLowerCase().includes(searchValue)));
   }
 
   return (
