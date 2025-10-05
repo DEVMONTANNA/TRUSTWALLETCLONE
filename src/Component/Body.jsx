@@ -257,8 +257,8 @@ const Home = () => {
                                 {v.symbol.toUpperCase()}
                               </span>
                             </td>
-                            <td className="py-4 px-6 text-center">
-                              <div className="flex justify-center">
+                            <td className="py-4 px-6 text-center justify-center ">
+                              <div className="flex ">
                                 <img
                                 loading="lazy"
                                   src={v.image}
@@ -267,8 +267,8 @@ const Home = () => {
                                 />
                               </div>
                             </td>
-                            <td className=" flex lg:items-center  py-4 px-6 font-medium text-gray-800">
-                              {v.current_price}
+                            <td className=" flex lg:items-center justify-center   py-4 px-6 font-medium text-gray-800">
+                            <span className="text-center items-center">  {v.current_price}</span>
                             </td>
                           </tr>
                         ))}
