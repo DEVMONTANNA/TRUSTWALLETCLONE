@@ -471,7 +471,7 @@ const Header = () => {
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 grid grid-cols-2 grid-rows-4 justify-between">
+                    <div className="space-y-1 grid grid-cols-2  bg-[yellow]  grid-rows-4 justify-between">
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -488,7 +488,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex items-center p-4   rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
