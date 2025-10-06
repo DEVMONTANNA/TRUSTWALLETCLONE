@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Tracking from "../../public/tracking.svg";
 import Telescope from "../../public/telescope.svg";
+import Helmet from "../assets/helmet.svg";
+import Hand from "../../public/hand.svg";
+import Trust from "../../public/trust.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -176,9 +179,9 @@ const Header = () => {
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
                   onMouseEnter={() => setActiveDropdown("wallet")}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-10 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[50vh] mt-10 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
-                  <div className="w-[35%]  p-4">
+                  <div className="w-[35%] flex items-center  p-4">
                     <img src={Tracking} />
                   </div>
 
@@ -231,11 +234,11 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
+                    <img src={Telescope} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 flex  justify-between">
+                    <div className="space-y-4 grid grid-cols-2 grid-rows-3 justify-between">
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -254,6 +257,74 @@ const Header = () => {
                         </div>
                       </div>
 
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -283,11 +354,11 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
+                    <img src={Helmet} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 flex  justify-between">
+                    <div className="space-y-4 grid grid-cols-2 grid-rows-2 justify-between">
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -323,6 +394,40 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -335,7 +440,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
+                    <img src={Hand} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
@@ -386,12 +491,29 @@ const Header = () => {
                   onMouseEnter={() => setActiveDropdown("about")}
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
-                  <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
+                  <div className="w-[35%] flex items-center  p-4">
+                    <img src={Trust} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-1 grid grid-cols-2    grid-rows-4 justify-between">
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Mobile App
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
+                          </a>
+                        </div>
+                      </div>
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
