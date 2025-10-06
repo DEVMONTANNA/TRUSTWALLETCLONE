@@ -43,13 +43,21 @@ const Mobiletoggleextension = () => {
                     🖥️ Extension
                   </button>
                 </div>
-                  <div className="  p-2 flex mb-8">
-                    {extension === "mobile" ? (
-                      <button className="lg:w-[50%] bg-[blue] text-[white] p-[13px] rounded-2xl cursor-pointer">Download Mobile</button>
-                    ) : (
-                      <button className="lg:w-[50%] bg-[blue] text-[white] p-[13px] rounded-2xl cursor-pointer">Download Extension</button>
-                    )}
-                  </div>
+                <div className="   p-2 flex mb-8">
+                  {extension === "mobile" ? (
+                    <a target="blank" href="https://trustwallet.com/download">
+                      <button className="lg:w-[100%] bg-[blue] text-[white] p-[13px] rounded-2xl cursor-pointer">
+                        Download Mobile
+                      </button>
+                    </a>
+                  ) : (
+                    <a target="blank" href="https://trustwallet.com/download">
+                      <button className="lg:w-[100%] bg-[blue] text-[white] p-[13px] rounded-2xl cursor-pointer">
+                        Download Extension
+                      </button>
+                    </a>
+                  )}
+                </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">

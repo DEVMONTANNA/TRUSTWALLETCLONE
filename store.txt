@@ -1,0 +1,138 @@
+<div className="w-[35%] p-4">
+                      <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl p-6 border border-blue-500/20">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                          <i className="fas fa-link text-white text-2xl"></i>
+                        </div>
+
+                        <h3 className="text-white font-bold text-xl text-center mb-3">
+                          Cross Chain Swaps Are Here!
+                        </h3>
+
+                        <p className="text-gray-300 text-sm text-center leading-relaxed mb-6">
+                          Seamless, secure and self-custodial cross-chain
+                          transactions. Swap between any blockchain instantly.
+                        </p>
+
+                        <div className="flex space-x-3">
+                          <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 text-sm">
+                            Try Now
+                          </button>
+                          <button className="flex-1 bg-transparent border border-gray-600 hover:border-blue-400 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 text-sm">
+                            Learn More
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Additional Feature */}
+                      <div className="mt-4 bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-4 border border-green-500/20">
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
+                            <i className="fas fa-bolt text-white"></i>
+                          </div>
+                          <div>
+                            <p className="text-white font-semibold text-sm">
+                              Lightning Fast
+                            </p>
+                            <p className="text-gray-400 text-xs">
+                              Sub-second transactions
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                     <div className="mt-8">
+                        <h1 className="text-white font-bold text-lg mb-4 flex items-center">
+                          <i className="fas fa-ellipsis-h mr-3 text-purple-400"></i>
+                          OTHERS
+                        </h1>
+
+                        <div className="flex items-center p-4 hover:bg-white/5 rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <i className="fas fa-bullseye text-white text-lg"></i>
+                            </div>
+                          </div>
+                          <div className="ml-4">
+                            <p className="font-semibold text-white group-hover:text-purple-300 transition-colors">
+                              HUNTER
+                            </p>
+                            <p className="text-gray-400 text-sm mt-1">
+                              Advanced trading tools
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      bg-gradient-to-br from-gray-900 to-black border border-gray-700
+
+
+                      <div className="w-[35%] p-4">
+                      <div className="mt-4 bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-4 border border-green-500/20">
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
+                            <i className="fas fa-bolt text-black"></i>
+                          </div>
+                          <div>
+                            <p className="text-black font-semibold text-sm">
+                              Lightning Fast
+                            </p>
+                            <p className="text-black text-xs">
+                              Sub-second transactions
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                     <div className="space-y-3">
+                        <div className="flex items-center p-4 hover:bg-white/5 rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <i className="fas fa-exchange-alt text-black text-lg"></i>
+                            </div>
+                          </div>
+                          <div className="ml-4">
+                            <p className="font-semibold text-black  group-hover:text-blue-300 transition-colors">
+                              SWAP
+                            </p>
+                            <p className="text-black text-sm mt-1">
+                              Instant token exchanges
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center p-4 hover:bg-white/5 rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <i className="fas fa-wallet text-black text-lg"></i>
+                            </div>
+                          </div>
+                          <div className="ml-4">
+                            <p className="font-semibold text-black group-hover:text-green-300 transition-colors">
+                              WALLET
+                            </p>
+                            <p className="text-black text-sm mt-1">
+                              Access Web3 with your phone
+                            </p>
+                          </div>
+                        </div>
+
+                        
+                        <div className="flex items-center p-4 hover:bg-white/5 rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent hover:border-white/10">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <i className="fas fa-chart-line text-black text-lg"></i>
+                            </div>
+                          </div>
+                          <div className="ml-4">
+                            <p className="font-semibold text-black group-hover:text-orange-300 transition-colors">
+                              PORTFOLIO
+                            </p>
+                            <p className="text-black text-sm mt-1">
+                              Track your assets' performance
+                            </p>
+                          </div>
+                        </div>
+                      </div>

@@ -252,7 +252,7 @@ const Home = () => {
                               </span>
                             </td>
 
-                            <td className="py-4 px-6 lg:flex  hidden ">
+                            <td className="py-4 px-6 lg:flex   hidden ">
                               <span className="lg:inline-flex  hidden items-center justify-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
                                 {v.symbol.toUpperCase()}
                               </span>
