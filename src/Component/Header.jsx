@@ -17,7 +17,7 @@ const Header = () => {
         <nav className="bg-[black] text-white p-4 md:p-7 fixed w-full top-0 z-10">
           <div className="container flex justify-between items-center">
             <a href="/">
-              <img src="trustmainlogo.png" alt="logo" className="w-40" />
+              <img loading="lazy"  src="trustmainlogo.png" alt="logo" className="w-40" />
             </a>
 
             <button
@@ -182,7 +182,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[50vh] mt-10 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%] flex items-center  p-4">
-                    <img src={Tracking} />
+                    <img loading="lazy" src={Tracking} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
@@ -234,7 +234,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Telescope} />
+                    <img  loading="lazy" src={Telescope} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
@@ -354,7 +354,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Helmet} />
+                    <img loading="lazy"  src={Helmet} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
@@ -440,7 +440,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img src={Hand} />
+                    <img loading="lazy" src={Hand} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
@@ -492,7 +492,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%] flex items-center  p-4">
-                    <img src={Trust} />
+                    <img loading="lazy" src={Trust} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
