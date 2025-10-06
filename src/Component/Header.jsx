@@ -231,7 +231,7 @@ const Header = () => {
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
                   onMouseEnter={() => setActiveDropdown("features")}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[60vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
                     <img  loading="lazy" src={Telescope} />
@@ -351,7 +351,7 @@ const Header = () => {
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
                   onMouseEnter={() => setActiveDropdown("build")}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[50vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
                     <img loading="lazy"  src={Helmet} />
@@ -437,7 +437,7 @@ const Header = () => {
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
                   onMouseEnter={() => setActiveDropdown("support")}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[50vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
                     <img loading="lazy" src={Hand} />
