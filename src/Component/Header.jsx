@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Tracking from "../../public/tracking.svg";
-import Telescope from "../../public/telescope.svg"
+import Telescope from "../../public/telescope.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mode, setMode] = useState(false);
-  const [walletHover, setWalletHover] = useState(false);
-  const [featuresHover, setFeaturesHover] = useState(false);
-  const [buildHover, setBuildHover] = useState(false);
-  const [supportHover, setSupportHover] = useState(false);
-  const [aboutHover, setAboutHover] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
     <>
@@ -176,9 +172,166 @@ const Header = () => {
             </button>
 
             <ul className="hidden lg:flex items-center space-x-6">
-              {walletHover && (
+              {activeDropdown === "wallet" && (
                 <div
-                  onMouseLeave={() => setWalletHover(false)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => setActiveDropdown("wallet")}
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-10 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                >
+                  <div className="w-[35%]  p-4">
+                    <img src={Tracking} />
+                  </div>
+
+                  <div className="w-[60%]  p-4  mx-4">
+                    <div className="space-y-4 flex  justify-between">
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Mobile App
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeDropdown === "features" && (
+                <div
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => setActiveDropdown("features")}
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                >
+                  <div className="w-[35%]  p-4">
+                    <img src={Tracking} />
+                  </div>
+
+                  <div className="w-[60%]  p-4  mx-4">
+                    <div className="space-y-4 flex  justify-between">
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Mobile App
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeDropdown === "build" && (
+                <div
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => setActiveDropdown("build")}
+                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
+                >
+                  <div className="w-[35%]  p-4">
+                    <img src={Tracking} />
+                  </div>
+
+                  <div className="w-[60%]  p-4  mx-4">
+                    <div className="space-y-4 flex  justify-between">
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Mobile App
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i className="fas fa-credit-card text-white text-lg"></i>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-black  transition-colors">
+                            Browser Extension
+                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeDropdown === "support" && (
+                <div
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => setActiveDropdown("support")}
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
@@ -197,9 +350,10 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -214,256 +368,22 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Browser Extension
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            An optimized web 3 experience for desktop
-                          </p></a>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               )}
-             
-              {featuresHover && (
+
+              {activeDropdown === "about" && (
                 <div
-                  onMouseLeave={() => setFeaturesHover(false)}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
-                >
-                  <div className="w-[35%]  p-4">
-                    <img src={Telescope} />
-                  </div>
-
-                  <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 grid grid-cols-2 grid-rows-1  justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            An optimized web 3 experience for desktop
-                          </p></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {buildHover && (
-                <div
-                  onMouseLeave={() =>setBuildHover(false)}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
-                >
-                  <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
-                  </div>
-
-                  <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 grid grid-cols-2 grid-rows-2 justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            An optimized web 3 experience for desktop
-                          </p></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {supportHover && (
-                <div
-                  onMouseLeave={() =>setSupportHover(false)}
-                  className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
-                >
-                  <div className="w-[35%]  p-4">
-                    <img src={Tracking} />
-                  </div>
-
-                  <div className="w-[60%]  p-4  mx-4">
-                    <div className="space-y-4 flex  justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Mobile App
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i className="fas fa-credit-card text-white text-lg"></i>
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
-                          </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            An optimized web 3 experience for desktop
-                          </p></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              {aboutHover && (
-                <div
-                  onMouseLeave={() =>setAboutHover(false)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  onMouseEnter={() => setActiveDropdown("about")}
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[65vh] mt-2 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
@@ -482,9 +402,10 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -498,9 +419,10 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -514,9 +436,10 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -530,9 +453,10 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
@@ -546,13 +470,13 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Mobile App
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            The world of web 3 in oue wallet
-                          </p>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              The world of web 3 in oue wallet
+                            </p>
                           </a>
                         </div>
                       </div>
-                     
 
                       <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
@@ -564,41 +488,39 @@ const Header = () => {
                           <p className="font-semibold text-black  transition-colors">
                             Browser Extension
                           </p>
-                          <a href="https://trustwallet.com/download"><p className="text-black text-sm mt-1 text-underline">
-                            An optimized web 3 experience for desktop
-                          </p></a>
+                          <a href="https://trustwallet.com/download">
+                            <p className="text-black text-sm mt-1 text-underline">
+                              An optimized web 3 experience for desktop
+                            </p>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               )}
-              <li>
-                <div
-                  onMouseEnter={() => setWalletHover(true)}
-                  // onMouseLeave={() => setHover(false)}
 
-                  className="flex  relative hover:text-gray-600 items-center  cursor-pointer "
-                >
-                  <ol className="mr-2"> Wallet</ol>
-                </div>
+              <li onMouseEnter={() => setActiveDropdown("wallet")}>
+                <a href="#" className="hover:text-gray-600">
+                  Wallet
+                </a>
               </li>
-              <li onMouseEnter={() => setFeaturesHover(true)}>
+              <li onMouseEnter={() => setActiveDropdown("features")}>
                 <a href="#" className="hover:text-gray-600">
                   Features
                 </a>
               </li>
-              <li onMouseEnter={() => setBuildHover(true)}>
+              <li onMouseEnter={() => setActiveDropdown("build")}>
                 <a href="#" className="hover:text-gray-600">
                   Build
                 </a>
               </li>
-              <li onMouseEnter={() => setSupportHover(true)}>
+              <li onMouseEnter={() => setActiveDropdown("support")}>
                 <a href="#" className="hover:text-gray-600">
                   Support
                 </a>
               </li>
-              <li onMouseEnter={() => setAboutHover(true)}>
+              <li onMouseEnter={() => setActiveDropdown("about")}>
                 <a href="#" className="hover:text-gray-600">
                   About
                 </a>
