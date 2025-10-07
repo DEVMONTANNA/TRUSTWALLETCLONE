@@ -349,8 +349,8 @@ const Home = () => {
                             <td className="py-4 px-6 font-medium text-gray-800">
                               <span className="hidden lg:inline">{v.name}</span>
                               <span className="lg:hidden">
-                                {v.name.length > 10
-                                  ? `${v.name.substring(0, 10)}...`
+                                {v.name.length > 7
+                                  ? `${v.name.substring(0, 7)}...`
                                   : v.name}
                               </span>
                             </td>
