@@ -1,4 +1,5 @@
 import React, { useState, useEffect, use } from "react";
+import { ethers } from "ethers";
 import Button from "./Button";
 import Header from "./Header";
 import RWAS from "../assets/RWAS.avif";
@@ -8,13 +9,65 @@ import Mobiletoggleextension from "./Mobiletoggleextension";
 const Home = () => {
   const [coin, setCoin] = useState([]);
   const [records, setRecords] = useState(coin);
+  const [allCoins, setAllCoins] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 30;
+
+  async function connectWallet() {
+    try {
+      // Check if MetaMask is available
+      if (typeof window.ethereum === "undefined") {
+        alert(
+          "MetaMask not found. Please install or enable it in your browser."
+        );
+        return;
+      }
+
+      // Create a provider instance
+      const provider = new ethers.BrowserProvider(window.ethereum);
+
+      // Request account access
+      const accounts = await provider.send("eth_requestAccounts", []);
+
+      // Get signer and address
+      const signer = await provider.getSigner();
+      const address = await signer.getAddress();
+
+      console.log("Connected account:", address);
+      alert(`Wallet connected: ${address}`);
+    } catch (err) {
+      console.error("Error connecting wallet:", err);
+      alert("Failed to connect to MetaMask. Check console for details.");
+    }
+  }
+
+  // async function connectWallet() {
+  //   if (!window.ethereum) {
+  //     alert("No MetaMask wallet found. Please install MetaMask to continue.");
+  //     return;
+  //   }
+  //   const provider = new ethers.BrowserProvider(window.ethereum);
+  //   try {
+  //     await provider.send("eth_requestAccounts", []);
+  //     const signer = provider.getSigner();
+  //     console.log("Account:", await signer.getAddress());
+  //   } catch (error) {
+  //     alert("Failed to connect wallet.");
+  //     console.error(error);
+  //   }
+  // }
 
   useEffect(() => {
     async function fetchPair() {
       const getCoins = localStorage.getItem("coins");
       const parsedCoins = JSON.parse(getCoins);
-      setCoin(parsedCoins?.slice(0, 30));
-      setRecords(parsedCoins?.slice(0, 30));
+
+      // Set initial data from localStorage if available
+      if (parsedCoins) {
+        setCoin(parsedCoins?.slice(0, itemsPerPage));
+        setRecords(parsedCoins?.slice(0, itemsPerPage));
+        setAllCoins(parsedCoins); // Store all coins
+      }
 
       try {
         const res = await fetch(
@@ -25,7 +78,12 @@ const Home = () => {
         }
         const convert_to_json = await res.json();
         localStorage.setItem("coins", JSON.stringify(convert_to_json));
-        setCoin(convert_to_json?.slice(0, 30));
+
+        // Update state with fresh API data
+        setCoin(convert_to_json?.slice(0, itemsPerPage));
+        setRecords(convert_to_json?.slice(0, itemsPerPage));
+        setAllCoins(convert_to_json); // Store all coins for pagination
+
         console.log(convert_to_json);
       } catch (error) {
         console.error("Error", error);
@@ -33,6 +91,36 @@ const Home = () => {
     }
     fetchPair();
   }, []);
+
+  const handleNxt = () => {
+    const nextPage = currentPage + 1;
+    const startIndex = (nextPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    const nextData = allCoins?.slice(startIndex, endIndex);
+
+    if (nextData && nextData.length > 0) {
+      setCoin(nextData);
+      setRecords(nextData);
+      setCurrentPage(nextPage);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      const prevPage = currentPage - 1;
+      const startIndex = (prevPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+
+      const prevData = allCoins?.slice(startIndex, endIndex);
+
+      if (prevData && prevData.length > 0) {
+        setCoin(prevData);
+        setRecords(prevData);
+        setCurrentPage(prevPage);
+      }
+    }
+  };
 
   function filter(event) {
     const searchValue = event.target.value.toLowerCase();
@@ -54,6 +142,16 @@ const Home = () => {
               world of Web3 with Trust Wallet.
             </h5>
             <div className="flex gap-4 lg:justify-start justify-center items-center ">
+              <button
+                className={
+                  "flex items-center gap-3 group bg-blue-600 text-white px-5 py-[6px] rounded-[20px] hover:bg-blue-700"
+                }
+                onClick={() => {
+                  connectWallet();
+                }}
+              >
+                Connect wallet
+              </button>
               <Button
                 textValue=""
                 icon={
@@ -89,7 +187,7 @@ const Home = () => {
           <div className="font-semibold lg:text-[24px] text-[20px]">
             <h3 className="lg:text-center text-center">Trusted by</h3>
             <h5 className="lg:text-[] text-center">
-              <span className="text-[blue]">200M</span> people
+              <span className="text-[blue] ">200M</span> people
             </h5>
           </div>
           <div className="font-semibold lg:text-[24px] text-[20px]">
@@ -173,7 +271,6 @@ const Home = () => {
                       />
                       <div className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400">
                         <svg
-                          
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5"
                           fill="none"
@@ -192,7 +289,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="overflow-x-auto rounded-xl shadow-md lg:w-[80%] md:w-[80%] w-[100%] bg-[red] flex justify-center items-center">
+                <div className="overflow-x-auto rounded-xl shadow-md lg:w-[80%] md:w-[80%] w-[100%]  flex justify-center items-center">
                   {!records.length ? (
                     <div className="flex flex-col justify-center items-center w-full py-16 bg-white rounded-xl">
                       <div className="text-gray-400 mb-4">
@@ -223,6 +320,9 @@ const Home = () => {
                       <thead className="bg-[blue] text-white">
                         <tr>
                           <th className="py-4 px-6 text-left font-semibold">
+                            ID
+                          </th>
+                          <th className="py-4 px-6 text-left font-semibold">
                             Name
                           </th>
                           <th className="py-4 px-6 text-left font-semibold">
@@ -243,6 +343,9 @@ const Home = () => {
                             key={i}
                             className="hover:bg-blue-50 transition-colors duration-200 cursor-pointer"
                           >
+                            <td className="py-4 px-6 text-center font-medium text-gray-500">
+                              {i + 1}
+                            </td>
                             <td className="py-4 px-6 font-medium text-gray-800">
                               <span className="hidden lg:inline">{v.name}</span>
                               <span className="lg:hidden">
@@ -260,7 +363,7 @@ const Home = () => {
                             <td className="py-4 px-6 text-center justify-center ">
                               <div className="flex ">
                                 <img
-                                loading="lazy"
+                                  loading="lazy"
                                   src={v.image}
                                   alt={`${v.name} logo`}
                                   className="w-10 h-10 rounded-full shadow-sm"
@@ -268,13 +371,50 @@ const Home = () => {
                               </div>
                             </td>
                             <td className=" flex lg:items-center justify-center   py-4 px-6 font-medium text-gray-800">
-                            <span className="text-center items-center">  {v.current_price}</span>
+                              <span className="text-center items-center">
+                                {" "}
+                                {v.current_price}
+                              </span>
                             </td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   )}
+                </div>
+                <div className="flex justify-between w-[80%] items-center mt-4 p-4">
+                  <button
+                    onClick={handlePrev}
+                    disabled={currentPage === 1}
+                    className={`px-6 py-2 rounded-lg transition-colors font-medium ${
+                      currentPage === 1
+                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-gray-600 text-white hover:bg-gray-700"
+                    }`}
+                  >
+                    Previous
+                  </button>
+
+                  <span className="text-gray-600 font-medium">
+                    Page {currentPage} of{" "}
+                    {Math.ceil(allCoins?.length / itemsPerPage) || 1}
+                  </span>
+
+                  <button
+                    onClick={handleNxt}
+                    disabled={
+                      !allCoins ||
+                      currentPage >= Math.ceil(allCoins.length / itemsPerPage)
+                    }
+                    className={`px-6 py-2 rounded-lg transition-colors font-medium ${
+                      !allCoins ||
+                      currentPage >= Math.ceil(allCoins.length / itemsPerPage)
+                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-blue-600 text-white hover:bg-blue-700"
+                    }`}
+                  >
+                    Next
+                  </button>
                 </div>
               </div>
             </div>

@@ -17,7 +17,12 @@ const Header = () => {
         <nav className="bg-[black] text-white p-4 md:p-7 fixed w-full top-0 z-10">
           <div className="container flex justify-between items-center">
             <a href="/">
-              <img loading="lazy"  src="trustmainlogo.png" alt="logo" className="w-40" />
+              <img
+                loading="lazy"
+                src="trustmainlogo.png"
+                alt="logo"
+                className="w-40"
+              />
             </a>
 
             <button
@@ -30,16 +35,17 @@ const Header = () => {
             </button>
 
             <ul className="hidden lg:flex items-center space-x-6">
-              <li>
+              <button>
                 <a href="#" className="hover:text-gray-400">
                   Wallet
                 </a>
-              </li>
+              </button>
               <li>
                 <a href="#" className="hover:text-gray-400">
                   Features
                 </a>
               </li>
+
               <li>
                 <a href="#" className="hover:text-gray-400">
                   Build
@@ -234,24 +240,24 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[60vh] mt-9 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img  loading="lazy" src={Telescope} />
+                    <img loading="lazy" src={Telescope} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-4 grid grid-cols-2 grid-rows-3 justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
-                        <div className="flex-shrink-0">
+                      <div className="flex items-center p-4    rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                        <div className="flex-shrink-0 ">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
                           </div>
                         </div>
                         <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
+                          <p className="font-semibold text-black hover:decoration-wavy transition-colors">
                             Mobile App
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 text-underline">
-                              The world of web 3 in oue wallet
+                            <p className="text-black text-sm mt-1 underline">
+                              The world of web 3 in our wallet
                             </p>
                           </a>
                         </div>
@@ -264,11 +270,11 @@ const Header = () => {
                           </div>
                         </div>
                         <div className="ml-4">
-                          <p className="font-semibold text-black  transition-colors">
+                          <p className="font-semibold hover:decoration-wavy text-black  transition-colors">
                             Browser Extension
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 text-underline">
+                            <p className="text-black text-sm mt-1 underline">
                               An optimized web 3 experience for desktop
                             </p>
                           </a>
@@ -285,7 +291,7 @@ const Header = () => {
                             Browser Extension
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 text-underline">
+                            <p className="text-black text-sm mt-1 underline">
                               An optimized web 3 experience for desktop
                             </p>
                           </a>
@@ -354,7 +360,7 @@ const Header = () => {
                   className="absolute overflow-y-auto overflow-x-hidden justify-between bg-[white] text-[black] z-50 w-[60vw] lg:w-[100%] max-h-[50vh] mt-8 shadow-2xl backdrop-blur-lg flex left-1/2 transform -translate-x-1/2 top-15 p-[20px] rounded-2xl animate-dropdown"
                 >
                   <div className="w-[35%]  p-4">
-                    <img loading="lazy"  src={Helmet} />
+                    <img loading="lazy" src={Helmet} />
                   </div>
 
                   <div className="w-[60%]  p-4  mx-4">
