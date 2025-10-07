@@ -382,7 +382,7 @@ const Home = () => {
                     </table>
                   )}
                 </div>
-                <div className="flex justify-between w-[80%] items-center mt-4 p-4">
+                <div className="flex justify-between w-[90%] items-center mt-4 p-4">
                   <button
                     onClick={handlePrev}
                     disabled={currentPage === 1}
