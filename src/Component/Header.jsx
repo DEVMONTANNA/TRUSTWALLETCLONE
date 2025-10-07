@@ -193,7 +193,7 @@ const Header = () => {
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-4 flex  justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -204,14 +204,14 @@ const Header = () => {
                             Mobile App
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 text-underline">
+                            <p className="text-black text-sm mt-1 ">
                               The world of web 3 in oue wallet
                             </p>
                           </a>
                         </div>
                       </div>
 
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -245,7 +245,7 @@ const Header = () => {
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-4 grid grid-cols-2 grid-rows-3 justify-between">
-                      <div className="flex items-center p-4    rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex items-center p-4  hover:underline   rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0 ">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -253,17 +253,17 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold text-black hover:decoration-wavy transition-colors">
-                            Mobile App
+                           Swap
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 underline">
+                            <p className="text-black text-sm mt-1 ">
                               The world of web 3 in our wallet
                             </p>
                           </a>
                         </div>
                       </div>
 
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -271,16 +271,16 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold hover:decoration-wavy text-black  transition-colors">
-                            Browser Extension
+                           Staking
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 underline">
+                            <p className="text-black text-sm mt-1 ">
                               An optimized web 3 experience for desktop
                             </p>
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -288,16 +288,16 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
+                           NFT
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 underline">
+                            <p className="text-black text-sm mt-1 ">
                               An optimized web 3 experience for desktop
                             </p>
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline  items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -305,7 +305,7 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
+                            Security
                           </p>
                           <a href="https://trustwallet.com/download">
                             <p className="text-black text-sm mt-1 text-underline">
@@ -314,7 +314,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline  items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -322,7 +322,7 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
+                            Buy crypto
                           </p>
                           <a href="https://trustwallet.com/download">
                             <p className="text-black text-sm mt-1 text-underline">
@@ -331,7 +331,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -339,10 +339,10 @@ const Header = () => {
                         </div>
                         <div className="ml-4">
                           <p className="font-semibold text-black  transition-colors">
-                            Browser Extension
+                            SWIFT:
                           </p>
                           <a href="https://trustwallet.com/download">
-                            <p className="text-black text-sm mt-1 text-underline">
+                            <p className="text-black text-sm mt-1 ">
                               An optimized web 3 experience for desktop
                             </p>
                           </a>
@@ -365,7 +365,7 @@ const Header = () => {
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-4 grid grid-cols-2 grid-rows-2 justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline  items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -383,7 +383,7 @@ const Header = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline  items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -400,7 +400,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -417,7 +417,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex hover:underline  items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -451,7 +451,7 @@ const Header = () => {
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-4 flex  justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -469,7 +469,7 @@ const Header = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -503,7 +503,7 @@ const Header = () => {
 
                   <div className="w-[60%]  p-4  mx-4">
                     <div className="space-y-1 grid grid-cols-2    grid-rows-4 justify-between">
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -520,7 +520,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -537,7 +537,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4   rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4   rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -554,7 +554,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -571,7 +571,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -588,7 +588,7 @@ const Header = () => {
                           </a>
                         </div>
                       </div>
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
@@ -606,7 +606,7 @@ const Header = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
+                      <div className="flex  hover:underline items-center p-4  rounded-2xl transition-all duration-300 group cursor-pointer border border-transparent ">
                         <div className="flex-shrink-0">
                           <div className="w-12 h-12 bg-[blue] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i className="fas fa-credit-card text-white text-lg"></i>
