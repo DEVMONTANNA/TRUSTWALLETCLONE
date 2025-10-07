@@ -7,13 +7,13 @@ const Mobiletoggleextension = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center lg:p-6 p-4">
         <div className="max-w-6xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-1/2 p-8 lg:p-12">
               <div className="max-w-md mx-auto lg:mx-0">
                 <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                  Your one-stop, Web3{" "}
+                  Your one-stop, Web3
                   <span className="text-blue-600">wallet</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">

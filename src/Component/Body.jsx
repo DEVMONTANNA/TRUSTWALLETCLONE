@@ -142,7 +142,7 @@ const Home = () => {
               world of Web3 with Trust Wallet.
             </h5>
             <div className="flex gap-4 lg:justify-start justify-center items-center ">
-              <button
+              {/* <button
                 className={
                   "flex items-center gap-3 group bg-blue-600 text-white px-5 py-[6px] rounded-[20px] hover:bg-blue-700"
                 }
@@ -151,7 +151,7 @@ const Home = () => {
                 }}
               >
                 Connect wallet
-              </button>
+              </button> */}
               <Button
                 textValue=""
                 icon={
@@ -372,7 +372,6 @@ const Home = () => {
                             </td>
                             <td className=" flex lg:items-center justify-center   py-4 px-6 font-medium text-gray-800">
                               <span className="text-center items-center">
-                                {" "}
                                 {v.current_price}
                               </span>
                             </td>
