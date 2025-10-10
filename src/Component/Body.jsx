@@ -200,12 +200,12 @@ const Home = () => {
             </h5>
           </div>
           <div className="font-semibold lg:text-[24px] text-[20px]">
-            <h3>Founded in</h3>
+            <h3 className="lg:text-[] text-center">Founded in</h3>
             <h4 className="text-center text-[blue]">2017</h4>
           </div>
           <div className="font-semibold lg:text-[24px] text-[20px]">
-            <h3>Independently</h3>
-            <h4 className="text-center text-[blue]">Audited</h4>
+            <h3 className="lg:text-[] text-center">Independently</h3>
+            <h4 className=" text-center text-[blue]">Audited</h4>
           </div>
           <div className="font-semibold lg:text-[24px] text-[20px]">
             <h3 className="text-center">ISO</h3>
@@ -213,7 +213,7 @@ const Home = () => {
           </div>
           <div className="font-semibold   lg:text-[24px] text-[20px] text-center grid col-span-full">
             <h3>Top reviews</h3>
-            <h4 className="text-center text-[blue]">star</h4>
+            <h4 className="text-center text-[blue] ">⭐⭐⭐⭐⭐</h4>
           </div>
         </div>
         <div className="flex items-center justify-center">
