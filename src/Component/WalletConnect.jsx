@@ -6,7 +6,8 @@ const WalletConnect = () => {
     address: '',
     balance: '',
     isConnected: false,
-    transactionNO:""
+    transactionNO:"",
+    network:""
   });
   const formatAddress = (address) => {
     if (!address) return '';
@@ -27,17 +28,21 @@ const WalletConnect = () => {
       const balance = await provider.getBalance(address);
       const txNum = await provider.getTransactionCount("ricmoo.eth");
       const formattedBalance = ethers.formatEther(balance);
+      const network = await provider.getNetwork();
+     
 
-      console.log("Connected account details:", signer);
-      console.log("Connected User Address:", address);
-      console.log("Connected account:", formattedBalance);
-      console.log("Connected account Transaction count:", txNum);
+    //   console.log("Connected account details:", signer);
+    //   console.log("Connected User Address:", address);
+    //   console.log("Connected account:", formattedBalance);
+    //   console.log("Connected account Transaction count:", txNum);
+    //  console.log("Network Details:",  network.name);
 
       setWalletData({
         address: address,
         balance: formattedBalance,
         isConnected: true,
-        transactionNO:txNum
+        transactionNO:txNum,
+        network:network.name
       });
 
     } catch (err) {
@@ -51,7 +56,8 @@ const WalletConnect = () => {
       address: '',
       balance: '',
       isConnected: false,
-      transactionNO:''
+      transactionNO:'',
+      network:''
     });
     console.log("Wallet disconnected");
   }
@@ -160,6 +166,19 @@ const WalletConnect = () => {
               <div className="bg-white p-4 rounded-lg border border-gray-200 text-center">
                 <div className="text-2xl font-bold text-gray-900">{walletData.balance}</div>
                 <div className="text-sm text-gray-500 font-medium">ETH</div>
+              </div>
+            </div>
+            {/* Network */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-600 flex items-center space-x-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>
+                <span>Network</span>
+              </label>
+              <div className="bg-white p-4 rounded-lg border border-gray-200 text-center">
+                <div className="text-2xl font-bold text-gray-900"><div className="text-sm text-gray-500 font-medium">ETH:</div>{walletData.network}</div>
+                
               </div>
             </div>
 

@@ -41,10 +41,12 @@ const Home = () => {
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
       const balance = await provider.getBalance(address);
+      const network = await provider.getNetwork();
 
-      console.log("Connected account details:", signer);
-      console.log("Connected User Address:", address);
-      console.log("Connected account:", balance);
+      console.log("Connected account details:", {signer});
+      console.log("Connected User Address:", {address});
+      console.log("Connected account:", {balance});
+      console.log("Network:", network.name);
 
       // Format the balance to ETH
       const formattedBalance = ethers.formatEther(balance);
