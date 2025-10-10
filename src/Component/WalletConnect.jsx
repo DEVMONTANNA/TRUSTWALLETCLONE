@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ethers } from "ethers";
 
 const WalletConnect = () => {
+  const [copy, setCopy] = useState(false);
   const [walletData, setWalletData] = useState({
     address: '',
     balance: '',
@@ -144,10 +145,18 @@ const WalletConnect = () => {
               <div className="flex items-center justify-between bg-white p-3 rounded-lg border border-gray-200">
                 <code className="text-sm font-mono text-gray-800">{formatAddress(walletData.address)}</code>
                 <button 
+                onMouseEnter={() => setCopy(true)}
+                onMouseLeave={() => setCopy(false)}
                   onClick={() => navigator.clipboard.writeText(walletData.address)}
                   className="text-blue-500 hover:text-blue-700 transition-colors p-1 rounded hover:bg-blue-50"
                   title="Copy to clipboard"
                 >
+                  {copy&& (
+                    <div className='z-[4000] absolute mt-[px]  ml-[15px] bg-[white] p-[4px] rounded'>
+                   <span className="text-green-500 text-[10px] font-bold">copy text</span>
+                    </div>
+                  )}
+                
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
