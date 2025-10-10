@@ -173,7 +173,7 @@ const Header = () => {
 
             <button
               className="block lg:hidden text-black mt-[-10px] md:mt-[-20px]"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(true)}
             >
               <i
                 className={`fas ${isOpen ? "fa-times" : "fa-bars"} text-2xl`}

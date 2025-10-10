@@ -1,4 +1,5 @@
 import React, { useState, useEffect, use } from "react";
+import { Link } from "react-router-dom";
 import { ethers } from "ethers";
 import Button from "./Button";
 import Header from "./Header";
@@ -15,6 +16,13 @@ const Home = () => {
 
   async function connectWallet() {
     try {
+      let retries = 0;
+      const maxRetries = 10;
+
+      while (typeof window.ethereum === "undefined" && retries < maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 100));
+        retries++;
+      }
       // Check if MetaMask is available
       if (typeof window.ethereum === "undefined") {
         alert(
@@ -32,8 +40,16 @@ const Home = () => {
       // Get signer and address
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
+      const balance = await provider.getBalance(address);
 
-      console.log("Connected account:", address);
+      console.log("Connected account details:", signer);
+      console.log("Connected User Address:", address);
+      console.log("Connected account:", balance);
+
+      // Format the balance to ETH
+      const formattedBalance = ethers.formatEther(balance);
+      console.log("Formatted balance:", formattedBalance, "ETH");
+
       alert(`Wallet connected: ${address}`);
     } catch (err) {
       console.error("Error connecting wallet:", err);
@@ -62,7 +78,6 @@ const Home = () => {
       const getCoins = localStorage.getItem("coins");
       const parsedCoins = JSON.parse(getCoins);
 
-      // Set initial data from localStorage if available
       if (parsedCoins) {
         setCoin(parsedCoins?.slice(0, itemsPerPage));
         setRecords(parsedCoins?.slice(0, itemsPerPage));
@@ -79,10 +94,9 @@ const Home = () => {
         const convert_to_json = await res.json();
         localStorage.setItem("coins", JSON.stringify(convert_to_json));
 
-        // Update state with fresh API data
         setCoin(convert_to_json?.slice(0, itemsPerPage));
         setRecords(convert_to_json?.slice(0, itemsPerPage));
-        setAllCoins(convert_to_json); // Store all coins for pagination
+        setAllCoins(convert_to_json); 
 
         console.log(convert_to_json);
       } catch (error) {
@@ -131,6 +145,7 @@ const Home = () => {
     <>
       <Header />
 
+              
       <div className="h-[100vh]    pt-[90px]">
         <div className="flex flex-col bg-[inherit] md:flex-row pt-[93px]">
           <div className="w-full lg:px-[50px]   px-[20px]  ">
@@ -142,17 +157,9 @@ const Home = () => {
               world of Web3 with Trust Wallet.
             </h5>
             <div className="flex gap-4 lg:justify-start justify-center items-center ">
-              {/* <button
-                className={
-                  "flex items-center gap-3 group bg-blue-600 text-white px-5 py-[6px] rounded-[20px] hover:bg-blue-700"
-                }
-                onClick={() => {
-                  connectWallet();
-                }}
-              >
-                Connect wallet
-              </button> */}
-              <Button
+           
+             <Button
+                 
                 textValue=""
                 icon={
                   <i className="fas fa-globe text-[blue] animate-bounce  group-hover:text-white transition-colors "></i>
@@ -164,18 +171,18 @@ const Home = () => {
                 textValue2="Mobile App"
                 text2ClassName={"text-[18px]"}
               />
+              <Link to="/connectwallet">
               <Button
-                textValue=""
-                icon={
-                  <i className="fas fa-globe text-[blue] animate-bounce  group-hover:text-white transition-colors "></i>
-                }
-                className={
-                  "flex items-center gap-[7px] group bg-[white] border border-[blue] hover:border-none   text-[blue] p-[7px] rounded-[50px] hover:bg-blue-600 hover:text-[white]"
+              // onClick={connectWallet}
+               textValue=""
+               className={
+                  "flex items-center gap-[7px] group bg-[white] border border-[blue] hover:border-none   text-[blue] p-[8px] rounded-[50px] hover:bg-blue-600 hover:text-[white]"
                 }
                 textClassName={"text-[blue] group-hover:text-white text-[13px]"}
-                textValue2="Desktop App"
+                textValue2="Connect Wallet"
                 text2ClassName={"text-[18px]"}
               />
+              </Link>
             </div>
           </div>
           <div className="flex   justify-center items-center w-full p-3">
