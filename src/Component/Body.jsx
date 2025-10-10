@@ -251,21 +251,24 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <section id="COINTABLE" className="">
+        <section id="COINTABLE" className="lg:mt-[] mt-[100px]">
           <div className="flex   flex-col justify-center w-full ">
             <div className="flex flex-col items-center justify-center ">
               <div className="flex flex-col items-center justify-centerlg:p-[] p-[20px]">
-                <p className="lg:text-[45px]  text-[28px] font-bold">
+                <p className="lg:text-[45px]  text-[24px] font-bold">
                   One Platform, Millions of Assets
                 </p>
-                <p className="lg:text-[19px] text-[18px] ">
+               <div className="lg:block hidden"> <p className="lg:text-[19px] text-[18px] ">
                   As a leading self-custody multi-chain platform, we support
                   millions of assets across 100+
                 </p>
                 <p className="lg:text-[19px] text-[18px] ">
                   blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos,
                   Optimism, and much more.
-                </p>
+                </p></div>
+                <p className="lg:hidden flex"> As a leading self-custody multi-chain platform, we support
+                  millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos,
+                  Optimism, and much more.</p>
               </div>
 
               <div className="w-full  flex flex-col justify-center items-center p-[5px]">
