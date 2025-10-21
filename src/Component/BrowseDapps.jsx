@@ -10,8 +10,8 @@ const BrowseDapps = () => {
      <p className=' text-[1.1rem] font-stretch-extra-condensed mt-[20px]'> Access Web3 and DeFi opportunities via our dApp browser</p>
      </div>
 
-       <div className=' bg-[white] w-full lg:w-[85%] flex flex-col lg:flex-row items-center justify-between rounded-[30px] p-5 lg:p-[20px] mb-6 lg:mb-[30px] mx-auto'>
-  <div className='w-[100%]  lg:w-1/2 p-[20px] flex flex-col items-center lg:items-start justify-center'>
+       <div className=' bg-[white] w-full lg:w-[85%] flex flex-col lg:flex-row items-center justify-between rounded-[30px] p-[10px] lg:p-[20px] mb-6 lg:mb-[30px] mx-auto'>
+  <div className='w-[100%]  lg:w-1/2 lg:p-[20px] p-[3px] flex flex-col items-center lg:items-start justify-center'>
     <p  className='text-[25px] text-black  font-bold '>Deposit crypto easily from exchanges</p>
     <p  className='text-[16px] text-black mt-[15px] '>Take control of your crypto. Avoid complicated steps and deposit directly to your wallet from exchanges like Binance and Coinbase.</p>
     <Button
