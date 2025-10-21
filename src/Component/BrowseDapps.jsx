@@ -11,7 +11,7 @@ const BrowseDapps = () => {
      </div>
 
        <div className=' bg-[white] w-full lg:w-[85%] flex flex-col lg:flex-row items-center justify-between rounded-[30px] p-[10px] lg:p-[20px] mb-6 lg:mb-[30px] mx-auto'>
-  <div className='w-[100%]  lg:w-1/2 lg:p-[20px] p-[3px] flex flex-col items-center lg:items-start '>
+  <div className='w-[100%]  lg:w-[50%] lg:p-[20px] p-[3px] flex flex-col items-center lg:items-start '>
     <p  className='text-[25px] text-black  font-bold '>Deposit crypto easily from exchanges</p>
     <p  className='text-[16px] text-black mt-[15px] '>Take control of your crypto. Avoid complicated steps and deposit directly to your wallet from exchanges like Binance and Coinbase.</p>
     <Button
@@ -20,7 +20,7 @@ const BrowseDapps = () => {
   textClassName="text-[16px] font-medium"
 />
   </div>
-  <div className='w-[100%]  lg:w-1/2 flex flex-col items-center lg:items-end justify-center'>
+  <div className='w-[100%]  lg:w-[50%] flex flex-col items-center lg:items-end justify-center'>
      <img 
     src={Phone} 
     className='lg:w-[80%] w-[100%] ' 
