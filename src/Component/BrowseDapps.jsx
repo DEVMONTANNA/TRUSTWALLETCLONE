@@ -78,7 +78,7 @@ const BrowseDapps = () => {
             <div className='w-full  lg:w-[60%] flex flex-col items-center justify-center mt-6 lg:mt-0 lg:pl-6 xl:pl-8'>
               <img 
                 src={Padlock} 
-                className='p-[10px] w-[60%]' 
+                className='p-[10px] lg:w-[60%] w-full' 
                 alt="phone showing crypto deposit interface" 
               />
             </div>
