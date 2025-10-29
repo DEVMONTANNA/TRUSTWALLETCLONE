@@ -47,7 +47,7 @@ const BrowseDapps = () => {
       </div>
 
       <div className='w-full px-5 sm:px-6 md:px-8 lg:px-4 pb-8 md:pb-12 flex items-center justify-center -mt-20 lg:-mt-24'>
-        <div className='z-[-10] bg-gradient-to-b from-[#fff465] via-[#48ff91] to-[#fff465] w-full lg:w-[92%] max-w-7xl rounded-3xl lg:rounded-[30px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16'>
+        <div className='z-[-10] lg:bg-gradient-to-b from-[#fff465] via-[#48ff91] to-[#fff465] bg-[#48ff91] w-full lg:w-[92%] max-w-7xl rounded-3xl lg:rounded-[30px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16'>
           fhewjvbwerivb
         </div>
       </div>
