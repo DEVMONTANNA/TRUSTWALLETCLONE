@@ -48,7 +48,7 @@ const BrowseDapps = () => {
       </div>
 
       <div className='w-full px-5 sm:px-6 md:px-8 lg:px-4 pb-8 md:pb-12 flex items-center justify-center -mt-20 lg:-mt-24'>
-        <div className='z-[-10] lg:bg-gradient-to-b from-[#fff465] via-[#48ff91] to-[#fff465] bg-[#fff465] w-full lg:w-[88%] max-w-7xl rounded-3xl lg:rounded-[30px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16'>
+        <div className='z-[-10] lg:bg-gradient-to-b from-[#fff465] via-[#48ff91] to-[#fff465] bg-[#fff465] w-full lg:w-[92%] max-w-7xl rounded-3xl lg:rounded-[30px] flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16'>
             <div className='flex flex-col w-full text-center lg:text-center px-2 sm:px-4'>
             <p className='text-3xl font-[verdana] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.2rem] font-semibold leading-tight sm:leading-tight md:leading-tight'>
              Zero personal tracking           
@@ -83,6 +83,30 @@ const BrowseDapps = () => {
               />
             </div>
           </div>
+         <div className='lg:bg-white bg-[transparent] w-full lg:w-[90%] max-w-6xl flex flex-col lg:flex-row items-center justify-between rounded-3xl lg:rounded-[30px] p-4 sm:p-6 mt-6 sm:mt-8 md:mt-10 lg:mt-12 lg:mb-[30px] mx-auto gap-4 sm:gap-6 lg:gap-8'>
+  
+  {/* First Card - Content at Top */}
+  <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+    <p className='text-center font-semibold mb-4'>Added security with encryption</p>
+    <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
+    <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
+  </div>
+
+  {/* Second Card - Content at Center */}
+ <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+    <p className='text-center font-semibold mb-4'>Added security with encryption</p>
+    <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
+    <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
+  </div>
+
+  {/* Third Card - Content at Bottom */}
+  <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+    <p className='text-center font-semibold mb-4'>Added security with encryption</p>
+    <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
+    <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
+  </div>
+
+</div>
         </div>
       </div>
     </>
