@@ -1,6 +1,8 @@
 import React from 'react'
 import Phone from "../../public/phoneimgnew.avif"
 import Padlock from "../../public/padlock.svg"
+import Security from "../../public/security.svg"
+import Tracking from "../../public/tracking.svg"
 import Button from './Button'
 
 const BrowseDapps = () => {
@@ -83,26 +85,25 @@ const BrowseDapps = () => {
               />
             </div>
           </div>
-         <div className='lg:bg-white bg-[transparent] w-full lg:w-[90%] max-w-6xl flex flex-col lg:flex-row items-center justify-between rounded-3xl lg:rounded-[30px] p-4 sm:p-6 mt-6 sm:mt-8 md:mt-10 lg:mt-12 lg:mb-[30px] mx-auto gap-4 sm:gap-6 lg:gap-8'>
+         <div className='  w-full lg:w-[93%] max-w-6xl flex flex-col lg:flex-row items-center justify-between rounded-3xl lg:rounded-[30px] p-4 sm:p-6 mt-6 sm:mt-8 md:mt-10 lg:mt-12 lg:mb-[30px] mx-auto gap-4 sm:gap-6 lg:gap-8'>
   
-  {/* First Card - Content at Top */}
-  <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+
+  <div className='bg-white lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[320px] rounded-[25px]'>
     <p className='text-center font-semibold mb-4'>Added security with encryption</p>
     <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
     <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
   </div>
 
-  {/* Second Card - Content at Center */}
- <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+ 
+ <div className='bg-white lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[320px] rounded-[25px]'>
     <p className='text-center font-semibold mb-4'>Added security with encryption</p>
-    <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
+    <img src={Security} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
     <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
   </div>
 
-  {/* Third Card - Content at Bottom */}
-  <div className='bg-yellow-300 lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[300px] rounded-xl'>
+  <div className='bg-white lg:w-[30%] w-full flex flex-col items-center justify-start p-4 lg:h-[320px] rounded-[25px]'>
     <p className='text-center font-semibold mb-4'>Added security with encryption</p>
-    <img src={Padlock} alt="padlock icon" className='w-[50%] max-w-[120px] mt-[30px]'/>
+    <img src={Tracking} alt="padlock icon" className='w-[33%] max-w-[120px] mt-[30px]'/>
     <p className=' mt-[45px]'>Use our Encrypted Cloud Backup for increased wallet security.</p>
   </div>
 
