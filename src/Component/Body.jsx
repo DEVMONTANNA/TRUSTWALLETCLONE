@@ -8,6 +8,7 @@ import Helmet from "../assets/helmet.svg";
 import Mobiletoggleextension from "./Mobiletoggleextension";
 import CoinTable from "./CoinTable";
 import BrowseDapps from "./BrowseDapps";
+import Developers from "./Developers";
 
 const Home = () => {
 
@@ -186,6 +187,7 @@ const Home = () => {
         <CoinTable/>
         <BrowseDapps />
         <Mobiletoggleextension />
+        <Developers/>
       </div>
     </>
   );
