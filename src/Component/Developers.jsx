@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Juanimg from "../../public/juanimg.avif"
 import Harryimg from "../../public/harryimg.avif"
+import Button from './Button';
 
 
 
@@ -52,6 +53,16 @@ const Developers = () => {
       ))}
     </div>
 </div>
+<a href='https://t.me/trustwallet'>
+     <div className=' lg:p-[40px] p-[20px] mt-[-30px]'>
+                <Button
+                  className="border  bg-[blue] hover:cursor-pointer text-white px-4 sm:px-6 py-3 rounded-full   text-center  flex items-center justify-center gap-3"
+                  textValue="Join our community on telegram"
+                  textClassName="text-sm sm:text-base md:text-[16px]  font-medium whitespace-nowrap"
+                />
+              </div>
+</a>
+
 
 
     </>
