@@ -9,6 +9,7 @@ import Mobiletoggleextension from "./Mobiletoggleextension";
 import CoinTable from "./CoinTable";
 import BrowseDapps from "./BrowseDapps";
 import Developers from "./Developers";
+import Footer from "./Footer";
 
 const Home = () => {
 
@@ -188,6 +189,7 @@ const Home = () => {
         <BrowseDapps />
         <Mobiletoggleextension />
         <Developers/>
+        <Footer/>
       </div>
     </>
   );
