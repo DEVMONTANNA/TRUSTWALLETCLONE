@@ -1,0 +1,58 @@
+/* Basic Nav Bar Styling */
+.nav-bar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    position: relative; /* Needed for dropdown positioning */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    position: absolute;
+    top: 100%; /* Position it below the parent */
+    left: 0;
+    width: 150px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    border-bottom: 1px solid #555;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #555;
+  }
+  
+  /* Show Dropdown on Hover */
+  .nav-item:hover .dropdown-menu {
+    display: block; /* Display the dropdown */
+  }
+  
