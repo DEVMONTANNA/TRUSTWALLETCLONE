@@ -102,9 +102,10 @@ const handleShowLess = () => {
           >
             {/* Logo */}
             <img 
+            loading='lazy'
               src={coin.image} 
               alt={coin.symbol} 
-              className='w-10  h-10 md:w-10 md:h-10 mb-2'
+              className='w-10   h-10 md:w-10 md:h-10 mb-2'
             />
             
             {/* Name and Symbol */}
