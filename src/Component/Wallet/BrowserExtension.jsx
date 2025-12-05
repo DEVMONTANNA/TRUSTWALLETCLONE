@@ -9,7 +9,11 @@ const [visibleCount, setVisibleCount] = useState(30); // Start with 24 items (4 
 
 const handleShowMore = () => {
   // Increase by 24 more items each click (adds 4 more rows)
-  setVisibleCount(prev => prev + 30);
+  setVisibleCount(prev => prev + 90);
+};
+const handleShowLess = () => {
+  // Increase by 24 more items each click (adds 4 more rows)
+  setVisibleCount(prev => prev - 100);
 };
 
   const [data, setData] = useState();
@@ -26,9 +30,20 @@ const handleShowMore = () => {
     }
 
   }
-  useEffect(() => {
-    fetchData();
-  }, []);
+ useEffect(() => {
+  // Initial fetch
+  fetchData();
+  
+  // // Set up interval to fetch every 1 second
+  // const intervalId = setInterval(() => {
+  //   fetchData();
+  // }, 10000); // 1000ms = 1 second
+  
+  // Cleanup function to clear interval when component unmounts
+  // return () => {
+  //   clearInterval(intervalId);
+  // };
+}, []);
 
   return (
     <div>
@@ -89,20 +104,20 @@ const handleShowMore = () => {
             <img 
               src={coin.image} 
               alt={coin.symbol} 
-              className='w-12  h-12 md:w-14 md:h-14 mb-2'
+              className='w-10  h-10 md:w-10 md:h-10 mb-2'
             />
             
             {/* Name and Symbol */}
             <div className='text-center'>
               
-              <p className='text-xs text-gray-500 uppercase'>
+              <p className='text-[14px] font-poppins font-semibold text-black uppercase'>
                 {coin.symbol}
               </p>
             </div>
             
             {/* Price */}
             <div className='mt-2 text-center'>
-              <p className='font-bold text-gray-800 text-sm'>
+              <p className='font-poppins font-semibold text-gray-800 text-[14px]'>
                 ${coin.current_price < 1 
                   ? coin.current_price.toFixed(4) 
                   : coin.current_price.toFixed(2)}
@@ -123,9 +138,23 @@ const handleShowMore = () => {
       <div className='mt-8 text-center'>
         <button
           onClick={handleShowMore}
-          className='px-6 py-3 hover:cursor-pointer bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg'
+          className='px-6 py-3 hover:cursor-pointer border border-[blue] rounded-[25px]  bg-[white] text-[blue] font-medium  hover:text-[white] hover:bg-[blue] transition-colors shadow-md hover:shadow-lg'
         >
-          Show More ({data.length - visibleCount} more coins)
+        View all networks
+        </button>
+        
+        <p className='text-gray-500 text-sm mt-2'>
+          Showing {visibleCount} of {data.length} cryptocurrencies
+        </p>
+      </div>
+    )}
+    {data && visibleCount > data.length && (
+      <div className='mt-8 text-center'>
+        <button
+          onClick={handleShowLess}
+          className='px-6 py-3 hover:cursor-pointer border border-[blue] rounded-[25px]  bg-[white] text-[blue] font-medium  hover:text-[white] hover:bg-[blue] transition-colors shadow-md hover:shadow-lg'
+        >
+        Hide all networks
         </button>
         
         <p className='text-gray-500 text-sm mt-2'>
