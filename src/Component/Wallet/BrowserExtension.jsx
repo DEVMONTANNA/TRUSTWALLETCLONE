@@ -5,14 +5,12 @@ import Button from '../Button'
 import Footer from '../Footer'
 
 const BrowserExtension = () => {
-const [visibleCount, setVisibleCount] = useState(30); // Start with 24 items (4 per column × 6 columns)
+const [visibleCount, setVisibleCount] = useState(36); // Start with 24 items (4 per column × 6 columns)
 
 const handleShowMore = () => {
-  // Increase by 24 more items each click (adds 4 more rows)
   setVisibleCount(prev => prev + 90);
 };
 const handleShowLess = () => {
-  // Increase by 24 more items each click (adds 4 more rows)
   setVisibleCount(prev => prev - 100);
 };
 
@@ -84,17 +82,17 @@ const handleShowLess = () => {
   <p className='text-center text-[23px]  font-semibold  font-poppins  text-[black] '>The Trust Wallet Browser Extension works on…</p>
 </div>
     <div className='w-full flex justify-center  items-center p-6'>
-  <div className='w-full lg:w-[80%] bg-blue-600 rounded-xl shadow-lg p-6'>
+  <div className='w-full lg:w-[80%] flex flex-col items-center justify-center bg-blue-600 rounded-xl shadow-lg p-6'>
     <h2 className='text-2xl font-bold text-white mb-6 text-center'>Cryptocurrency Market</h2>
     
 
 
 
-  <div className='w-full  bg-[white] rounded-xl shadow-lg p-6'>
+  <div className='lg:w-[85%] w-full  bg-[white] rounded-xl shadow-lg p-6'>
     <h2 className='text-2xl font-bold text-gray-800 mb-6 text-center'>Top Cryptocurrencies</h2>
     
     {data && (
-      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
+      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4'>
         {data.slice(0, visibleCount).map((coin, index) => (
           <div 
             key={coin.id || index} 
@@ -117,7 +115,7 @@ const handleShowLess = () => {
             </div>
             
             {/* Price */}
-            <div className='mt-2 text-center'>
+            {/* <div className='mt-2 text-center'>
               <p className='font-poppins font-semibold text-gray-800 text-[14px]'>
                 ${coin.current_price < 1 
                   ? coin.current_price.toFixed(4) 
@@ -127,7 +125,7 @@ const handleShowLess = () => {
                 {coin.price_change_percentage_24h >= 0 ? '↗' : '↘'} 
                 {Math.abs(coin.price_change_percentage_24h).toFixed(1)}%
               </p>
-            </div>
+            </div> */}
            
           </div>
         ))}
