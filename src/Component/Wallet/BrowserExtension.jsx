@@ -3,6 +3,10 @@ import Image from "../../../public/pcimg.png"
 import Header from '../Header'
 import Button from '../Button'
 import Footer from '../Footer'
+import BuyCrypto from "../../../public/ycrypto.svg"
+import Swap from "../../../public/swapcrypyo.svg"
+import Portfolio from "../../../public/buildport.svg"
+import Nft from "../../../public/managenft.svg"
 
 const BrowserExtension = () => {
 const [visibleCount, setVisibleCount] = useState(36); // Start with 24 items (4 per column × 6 columns)
@@ -173,6 +177,48 @@ const handleShowLess = () => {
 </div>
   </div>
 
+
+<div className='w-full mt-[50px] p-[20px]'>
+  <div className='flex lg:justify-around justify-start items-stretch overflow-x-auto overscroll-x-auto scrollbar-hide gap-6 lg:gap-4'>
+    
+    {/* Card 1 */}
+    <div className='bg-[#f4f4f7] border border-[#dbdce5] hover:cursor-pointer flex-shrink-0 lg:w-[21%] w-[85vw] rounded-[25px] grid grid-cols-1 grid-rows-3 p-6'>
+      <p className='text-[28px] lg:text-[30px] font-poppins font-semibold  mt-[10px]'>Buy crypto with ease</p> 
+      <p className='font-poppins text-[15px] lg:text-[17px]'>Buy crypto with a debit or credit card, mobile payments, or bank transfers.</p>
+      <div className='flex justify-center items-center mt-[-50px]'>
+        <img src={BuyCrypto} alt="swapcrypto" className='w-[80%] lg:w-[70%]'/>
+      </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className='bg-[#f4f4f7] border border-[#dbdce5] hover:cursor-pointer flex-shrink-0 lg:w-[21%] w-[85vw] rounded-[25px] grid grid-cols-1 grid-rows-3 p-6'>
+      <p className='text-[28px] lg:text-[27px] font-poppins font-semibold mt-[10px]'>Earn rewards & build your portfolio</p> 
+      <p className='font-poppins text-[15px] lg:text-[17px]  mt-[10px]'>Earn rewards, all the way up to 70% APR via trusted providers.</p>
+      <div className='flex justify-center items-center mt-[-40px]'>
+        <img src={Swap} alt="swapcrypto" className='w-[80%] lg:w-[70%]'/>
+      </div>
+    </div>
+
+    {/* Card 3 */}
+    <div className='bg-[#f4f4f7] border border-[#dbdce5] hover:cursor-pointer flex-shrink-0 lg:w-[21%] w-[85vw] rounded-[25px] grid grid-cols-1 grid-rows-3 p-6'>
+      <p className='text-[28px] lg:text-[30px] font-poppins font-semibold  mt-[10px]'>Explore & manage NFTs</p> 
+      <p className='font-poppins text-[15px] lg:text-[17px]'>Explore top NFT marketplaces and manage your NFTs securely.</p>
+      <div className='flex justify-center items-center mt-[-50px]'>
+        <img src={Portfolio} alt="swapcrypto" className='w-[80%] lg:w-[70%]'/>
+      </div>
+    </div>
+
+    {/* Card 4 */}
+    <div className='bg-[#f4f4f7] border border-[#dbdce5] hover:cursor-pointer flex-shrink-0 lg:w-[21%] w-[85vw] rounded-[25px] grid grid-cols-1 grid-rows-3 p-6'>
+      <p className='text-[28px] lg:text-[30px] font-poppins font-semibold'>Swap crypto safely</p> 
+      <p className='font-poppins text-[15px] lg:text-[17px]'>Swap 10,000+ cryptocurrencies with trusted swap providers.</p>
+      <div className='flex justify-center items-center mt-[-50px]'>
+        <img src={Nft} alt="swapcrypto" className='w-[80%] lg:w-[70%]'/>
+      </div>
+    </div>
+
+  </div>
+</div>
   <Footer/>
 </div>
   
